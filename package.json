@@ -1,0 +1,10 @@
+{
+  "main": "main.html",
+  "name": "Klokka",
+  "description": "",
+  "version": "0.0.1",
+  "keywords": [ "Klokka", "node-webkit", "node.js", "CodeMirror" ],
+  "window": {
+    "frame": true
+  }
+}
