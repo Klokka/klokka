@@ -66,12 +66,20 @@
 			z-index: 3;
 		}
 	</style>
+	<link rel="stylesheet" href="./lib/CodeMirror/lib/codemirror.css" />
 	<script type="text/javascript" src="./lib/jQuery/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="./lib/CodeMirror/lib/codemirror.js"></script>
+	<script src="./lib/CodeMirror/mode/javascript/javascript.js"></script>
 	<script type="text/javascript">
 		$().ready(function() {
 			$(".tabs .tab").click(function(e) {
 				$(".tabs .tab.active").removeClass("active");
 				$(this).addClass("active");
+			});
+
+			CodeMirror($('.editorContainer div')[0], {
+			  value: "function myScript(){return 100;}\n",
+			  mode:  "javascript"
 			});
 		});
 	</script>
@@ -88,7 +96,9 @@
 		</ul>
 	</div>
 	<div>
-		CodeMirror HERE!
+		<div class="editorContainer">
+			<div></div>
+		</div>
 	</div>
 </body>
 </html>
